@@ -221,3 +221,4 @@ __marimo__/
 *.png
 *.jpg
 *.jpeg
+*out_**/*

@@ -3,30 +3,7 @@ import copy
 import math
 from sage.all import Graph, graphs, rainbow, text
 
-def load_graph(file_name):
-    G = Graph()
-    pos_dict = {}
-
-    # Open the file and read the lines
-    with open(os.path.join("input_graphs",file_name), "r") as f:
-        # Read lines and ignore any empty trailing lines
-        lines = [line.strip() for line in f if line.strip()]
-
-    n = int(lines[0])
-
-    for i in range(n):
-        parts = lines[i + 1].split()
-
-        # Extract coordinates
-        pos_dict[i] = (float(parts[0]), float(parts[1]))
-
-        # Extract edges
-        for neighbor in parts[2:]:
-            G.add_edge(i, int(neighbor))
-
-    # Apply layout and show
-    G.set_pos(pos_dict)
-    return G
+from graph_utils import load_graph
 
 def get_smallest_angle(G, pos):
     """Calculates the tightest angle in a given layout."""
