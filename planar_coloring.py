@@ -1,10 +1,7 @@
 import os
 import copy
 import math
-from sage.graphs.graph import Graph
-from sage.graphs.graph_generators import graphs
-from sage.plot.colors import rainbow
-from sage.plot.text import text
+from sage.all import Graph, graphs, rainbow, text
 
 def load_graph(file_name):
     G = Graph()

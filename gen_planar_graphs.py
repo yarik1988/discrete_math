@@ -1,5 +1,5 @@
 import os
-from sage.graphs.graph_generators import graphs
+from sage.all import graphs
 from tqdm import tqdm
 # Use Sage's built-in generator
 os.makedirs("output_gen", exist_ok=True)
